@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="glm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\SDL2_ttf\;CMake Files\libs\glew\;CMake Files\libs\glew\build\;CMake Files\libs\glew\build\cmake\;CMake Files\libs\glfw\;CMake Files\libs\glfw\src\;CMake Files\libs\glfw\examples\;CMake Files\libs\glfw\tests\;CMake Files\libs\SDL2\;CMake Files\libs\SDL2\cmake\;CMake Files\libs\SDL2\include\;CMake Files\libs\SDL2\include\SDL2\;CMake Files\libs\glad\;CMake Files\libs\glm\;CMake Files\libs\glm\glm\;CMake Files\libs\bgfx\;CMake Files\libs\bgfx\cmake\;CMake Files\libs\bgfx\cmake\3rdparty\;CMake Files\libs\bgfx\cmake\tools\;CMake Files\libs\bgfx\cmake\util\;CMake Files\libs\bgfx\generated\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\SDL2\;CMake Files\BunyEngine\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/geremy/CLionProjects/BunyEngine/cmake-build-debug-coverage/libs/glm"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/geremy/CLionProjects/BunyEngine/cmake-build-debug-coverage/libs/glm/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/geremy/CLionProjects/BunyEngine/cmake-build-debug-coverage/libs/glm/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/geremy/CLionProjects/BunyEngine/cmake-build-debug-coverage/libs/glm/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/geremy/CLionProjects/BunyEngine/cmake-build-debug-coverage/libs/glm/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2_ttf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\SDL2_ttf\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2_ttf/SDL2_ttf.pc.in">
+			<Option virtualFolder="CMake Files\libs\SDL2_ttf\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glew/glew.pc.in">
+			<Option virtualFolder="CMake Files\libs\glew\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glew/build/cmake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glew\build\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glew/build/cmake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\libs\glew\build\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glfw\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\libs\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\libs\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\libs\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glfw\examples\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glfw/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glfw\tests\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/SDL2.spec.in">
+			<Option virtualFolder="CMake Files\libs\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/sdl2-config.in">
+			<Option virtualFolder="CMake Files\libs\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/sdl2.pc.in">
+			<Option virtualFolder="CMake Files\libs\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/cmake/macros.cmake">
+			<Option virtualFolder="CMake Files\libs\SDL2\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/cmake/sdlchecks.cmake">
+			<Option virtualFolder="CMake Files\libs\SDL2\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/SDL2/include/SDL2/SDL_config.h.cmake">
+			<Option virtualFolder="CMake Files\libs\SDL2\include\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glad/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glad\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glm\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/glm/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\glm\glm\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\bgfx\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/bgfx.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/bimg.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/bx.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/examples.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/shared.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/tools.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/version.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/astc-codec.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/astc.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/dear-imgui.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/edtaa3.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/etc1.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/etc2.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/fcpp.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/glsl-optimizer.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/glslang.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/iqa.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/libsquish.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/meshoptimizer.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/nvtt.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/pvrtc.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/spirv-cross.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/spirv-tools.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/3rdparty/webgpu.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\3rdparty\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/tools/geometryc.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/tools/geometryv.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/tools/shaderc.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/tools/texturec.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/tools/texturev.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/cmake/util/ConfigureDebugging.cmake">
+			<Option virtualFolder="CMake Files\libs\bgfx\cmake\util\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/generated/bounds.cpp.in">
+			<Option virtualFolder="CMake Files\libs\bgfx\generated\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/generated/shader_spirv.cpp.in">
+			<Option virtualFolder="CMake Files\libs\bgfx\generated\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/libs/bgfx/generated/vertexlayout.cpp.in">
+			<Option virtualFolder="CMake Files\libs\bgfx\generated\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/../../../../usr/local/lib/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/../../../../usr/local/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/home/geremy/CLionProjects/BunyEngine/BunyEngine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BunyEngine\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

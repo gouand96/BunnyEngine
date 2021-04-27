@@ -1,0 +1,1144 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b6ac9/fast && /usr/bin/make  -f CMakeFiles/cmTC_b6ac9.dir/build.make CMakeFiles/cmTC_b6ac9.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_b6ac9.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b6ac9.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b6ac9
+/opt/clion-2021.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6ac9.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_b6ac9.dir/src.c.o -o cmTC_b6ac9 
+/usr/bin/ld: CMakeFiles/cmTC_b6ac9.dir/src.c.o: в функции «main»:
+src.c:(.text+0x46): неопределённая ссылка на «pthread_create»
+/usr/bin/ld: src.c:(.text+0x52): неопределённая ссылка на «pthread_detach»
+/usr/bin/ld: src.c:(.text+0x5e): неопределённая ссылка на «pthread_cancel»
+/usr/bin/ld: src.c:(.text+0x6f): неопределённая ссылка на «pthread_join»
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b6ac9.dir/build.make:106: cmTC_b6ac9] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_b6ac9/fast] Ошибка 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e7d0e/fast && /usr/bin/make  -f CMakeFiles/cmTC_e7d0e.dir/build.make CMakeFiles/cmTC_e7d0e.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_e7d0e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e7d0e.dir/CheckFunctionExists.c.o -c /opt/clion-2021.1.1/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7d0e
+/opt/clion-2021.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7d0e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_e7d0e.dir/CheckFunctionExists.c.o -o cmTC_e7d0e  -lpthreads 
+/usr/bin/ld: невозможно найти -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e7d0e.dir/build.make:106: cmTC_e7d0e] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_e7d0e/fast] Ошибка 2
+
+
+
+Performing C SOURCE FILE Test HAVE_GCC_PREFERRED_STACK_BOUNDARY failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_04888/fast && /usr/bin/make  -f CMakeFiles/cmTC_04888.dir/build.make CMakeFiles/cmTC_04888.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_04888.dir/src.c.o
+/usr/bin/cc -DHAVE_GCC_PREFERRED_STACK_BOUNDARY  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos" -mpreferred-stack-boundary=2 -o CMakeFiles/cmTC_04888.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc1: error: ‘-mpreferred-stack-boundary=2’ is not between 3 and 12
+make[1]: *** [CMakeFiles/cmTC_04888.dir/build.make:85: CMakeFiles/cmTC_04888.dir/src.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_04888/fast] Ошибка 2
+
+
+Source file was:
+int x = 0; int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_26a65/fast && /usr/bin/make  -f CMakeFiles/cmTC_26a65.dir/build.make CMakeFiles/cmTC_26a65.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_26a65.dir/src.c.o
+/usr/bin/cc -DHAVE_ALTIVEC_H_HDR  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos" -maltivec -o CMakeFiles/cmTC_26a65.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-maltivec’
+make[1]: *** [CMakeFiles/cmTC_26a65.dir/build.make:85: CMakeFiles/cmTC_26a65.dir/src.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_26a65/fast] Ошибка 2
+
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_ALTIVEC failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_df527/fast && /usr/bin/make  -f CMakeFiles/cmTC_df527.dir/build.make CMakeFiles/cmTC_df527.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_df527.dir/src.c.o
+/usr/bin/cc -DHAVE_ALTIVEC  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos" -maltivec -o CMakeFiles/cmTC_df527.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-maltivec’
+make[1]: *** [CMakeFiles/cmTC_df527.dir/build.make:85: CMakeFiles/cmTC_df527.dir/src.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_df527/fast] Ошибка 2
+
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d978a/fast && /usr/bin/make  -f CMakeFiles/cmTC_d978a.dir/build.make CMakeFiles/cmTC_d978a.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_d978a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_d978a.dir/CheckIncludeFile.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: libunwind.h: Нет такого файла или каталога
+    1 | #include <libunwind.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_d978a.dir/build.make:85: CMakeFiles/cmTC_d978a.dir/CheckIncludeFile.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_d978a/fast] Ошибка 2
+
+
+
+Determining if the strlcpy exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5e78d/fast && /usr/bin/make  -f CMakeFiles/cmTC_5e78d.dir/build.make CMakeFiles/cmTC_5e78d.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_5e78d.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_5e78d.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘strlcpy’ undeclared (first use in this function); did you mean ‘strncpy’?
+   14 |   return ((int*)(&strlcpy))[argc];
+      |                   ^~~~~~~
+      |                   strncpy
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_5e78d.dir/build.make:85: CMakeFiles/cmTC_5e78d.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_5e78d/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcpy
+  return ((int*)(&strlcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strlcat exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_db868/fast && /usr/bin/make  -f CMakeFiles/cmTC_db868.dir/build.make CMakeFiles/cmTC_db868.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_db868.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_db868.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘strlcat’ undeclared (first use in this function); did you mean ‘strncat’?
+   14 |   return ((int*)(&strlcat))[argc];
+      |                   ^~~~~~~
+      |                   strncat
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_db868.dir/build.make:85: CMakeFiles/cmTC_db868.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_db868/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strrev exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_adc8a/fast && /usr/bin/make  -f CMakeFiles/cmTC_adc8a.dir/build.make CMakeFiles/cmTC_adc8a.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_adc8a.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_adc8a.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strrev’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strrev))[argc];
+      |                   ^~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_adc8a.dir/build.make:85: CMakeFiles/cmTC_adc8a.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_adc8a/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strrev
+  return ((int*)(&_strrev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strupr exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0b203/fast && /usr/bin/make  -f CMakeFiles/cmTC_0b203.dir/build.make CMakeFiles/cmTC_0b203.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_0b203.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_0b203.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strupr’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strupr))[argc];
+      |                   ^~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_0b203.dir/build.make:85: CMakeFiles/cmTC_0b203.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_0b203/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strupr
+  return ((int*)(&_strupr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strlwr exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_67507/fast && /usr/bin/make  -f CMakeFiles/cmTC_67507.dir/build.make CMakeFiles/cmTC_67507.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_67507.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_67507.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strlwr’ undeclared (first use in this function)
+   14 |   return ((int*)(&_strlwr))[argc];
+      |                   ^~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_67507.dir/build.make:85: CMakeFiles/cmTC_67507.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_67507/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strlwr
+  return ((int*)(&_strlwr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the itoa exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_45eec/fast && /usr/bin/make  -f CMakeFiles/cmTC_45eec.dir/build.make CMakeFiles/cmTC_45eec.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_45eec.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_45eec.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘itoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&itoa))[argc];
+      |                   ^~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_45eec.dir/build.make:85: CMakeFiles/cmTC_45eec.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_45eec/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef itoa
+  return ((int*)(&itoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ltoa exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_27042/fast && /usr/bin/make  -f CMakeFiles/cmTC_27042.dir/build.make CMakeFiles/cmTC_27042.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_27042.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_27042.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ltoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ltoa))[argc];
+      |                   ^~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_27042.dir/build.make:85: CMakeFiles/cmTC_27042.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_27042/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ltoa
+  return ((int*)(&_ltoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _uitoa exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_71fd0/fast && /usr/bin/make  -f CMakeFiles/cmTC_71fd0.dir/build.make CMakeFiles/cmTC_71fd0.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_71fd0.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_71fd0.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_uitoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_uitoa))[argc];
+      |                   ^~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_71fd0.dir/build.make:85: CMakeFiles/cmTC_71fd0.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_71fd0/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _uitoa
+  return ((int*)(&_uitoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ultoa exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_912c6/fast && /usr/bin/make  -f CMakeFiles/cmTC_912c6.dir/build.make CMakeFiles/cmTC_912c6.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_912c6.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_912c6.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ultoa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ultoa))[argc];
+      |                   ^~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_912c6.dir/build.make:85: CMakeFiles/cmTC_912c6.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_912c6/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ultoa
+  return ((int*)(&_ultoa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _i64toa exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2acbb/fast && /usr/bin/make  -f CMakeFiles/cmTC_2acbb.dir/build.make CMakeFiles/cmTC_2acbb.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_2acbb.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_2acbb.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_i64toa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_i64toa))[argc];
+      |                   ^~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_2acbb.dir/build.make:85: CMakeFiles/cmTC_2acbb.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_2acbb/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _i64toa
+  return ((int*)(&_i64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _ui64toa exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_685ed/fast && /usr/bin/make  -f CMakeFiles/cmTC_685ed.dir/build.make CMakeFiles/cmTC_685ed.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_685ed.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_685ed.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_ui64toa’ undeclared (first use in this function)
+   14 |   return ((int*)(&_ui64toa))[argc];
+      |                   ^~~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_685ed.dir/build.make:85: CMakeFiles/cmTC_685ed.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_685ed/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _ui64toa
+  return ((int*)(&_ui64toa))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _stricmp exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_50ad3/fast && /usr/bin/make  -f CMakeFiles/cmTC_50ad3.dir/build.make CMakeFiles/cmTC_50ad3.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_50ad3.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_50ad3.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   14 |   return ((int*)(&_stricmp))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_50ad3.dir/build.make:85: CMakeFiles/cmTC_50ad3.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_50ad3/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _stricmp
+  return ((int*)(&_stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strnicmp exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_73299/fast && /usr/bin/make  -f CMakeFiles/cmTC_73299.dir/build.make CMakeFiles/cmTC_73299.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_73299.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_73299.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_strnicmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   14 |   return ((int*)(&_strnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   strncmp
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_73299.dir/build.make:85: CMakeFiles/cmTC_73299.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_73299/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strnicmp
+  return ((int*)(&_strnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslcat exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4f2a3/fast && /usr/bin/make  -f CMakeFiles/cmTC_4f2a3.dir/build.make CMakeFiles/cmTC_4f2a3.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_4f2a3.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_4f2a3.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘wcslcat’ undeclared (first use in this function); did you mean ‘wcsncat’?
+   14 |   return ((int*)(&wcslcat))[argc];
+      |                   ^~~~~~~
+      |                   wcsncat
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_4f2a3.dir/build.make:85: CMakeFiles/cmTC_4f2a3.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_4f2a3/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslcat
+  return ((int*)(&wcslcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcslcpy exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_97a11/fast && /usr/bin/make  -f CMakeFiles/cmTC_97a11.dir/build.make CMakeFiles/cmTC_97a11.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_97a11.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_97a11.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘wcslcpy’ undeclared (first use in this function); did you mean ‘wcsncpy’?
+   14 |   return ((int*)(&wcslcpy))[argc];
+      |                   ^~~~~~~
+      |                   wcsncpy
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_97a11.dir/build.make:85: CMakeFiles/cmTC_97a11.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_97a11/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcslcpy
+  return ((int*)(&wcslcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsicmp exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6bca7/fast && /usr/bin/make  -f CMakeFiles/cmTC_6bca7.dir/build.make CMakeFiles/cmTC_6bca7.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_6bca7.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_6bca7.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsicmp’ undeclared (first use in this function); did you mean ‘wcsncmp’?
+   14 |   return ((int*)(&_wcsicmp))[argc];
+      |                   ^~~~~~~~
+      |                   wcsncmp
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_6bca7.dir/build.make:85: CMakeFiles/cmTC_6bca7.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_6bca7/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsicmp
+  return ((int*)(&_wcsicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _wcsnicmp exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_18c1b/fast && /usr/bin/make  -f CMakeFiles/cmTC_18c1b.dir/build.make CMakeFiles/cmTC_18c1b.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_18c1b.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_18c1b.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘_wcsnicmp’ undeclared (first use in this function); did you mean ‘wcsncmp’?
+   14 |   return ((int*)(&_wcsnicmp))[argc];
+      |                   ^~~~~~~~~
+      |                   wcsncmp
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_18c1b.dir/build.make:85: CMakeFiles/cmTC_18c1b.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_18c1b/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _wcsnicmp
+  return ((int*)(&_wcsnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fopen64 exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b41d6/fast && /usr/bin/make  -f CMakeFiles/cmTC_b41d6.dir/build.make CMakeFiles/cmTC_b41d6.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_b41d6.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_b41d6.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘fopen64’ undeclared (first use in this function); did you mean ‘fopen’?
+   14 |   return ((int*)(&fopen64))[argc];
+      |                   ^~~~~~~
+      |                   fopen
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_b41d6.dir/build.make:85: CMakeFiles/cmTC_b41d6.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_b41d6/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fopen64
+  return ((int*)(&fopen64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fseeko64 exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0de8a/fast && /usr/bin/make  -f CMakeFiles/cmTC_0de8a.dir/build.make CMakeFiles/cmTC_0de8a.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_0de8a.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_0de8a.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: error: ‘fseeko64’ undeclared (first use in this function); did you mean ‘fseeko’?
+   14 |   return ((int*)(&fseeko64))[argc];
+      |                   ^~~~~~~~
+      |                   fseeko
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_0de8a.dir/build.make:85: CMakeFiles/cmTC_0de8a.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_0de8a/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stddef.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fseeko64
+  return ((int*)(&fseeko64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sysctlbyname exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6d12d/fast && /usr/bin/make  -f CMakeFiles/cmTC_6d12d.dir/build.make CMakeFiles/cmTC_6d12d.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_6d12d.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_6d12d.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+In file included from /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:
+/usr/include/x86_64-linux-gnu/sys/sysctl.h:21:2: warning: #warning "The <sys/sysctl.h> header is deprecated and will be removed." [-Wcpp]
+   21 | #warning "The <sys/sysctl.h> header is deprecated and will be removed."
+      |  ^~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: error: ‘sysctlbyname’ undeclared (first use in this function)
+    9 |   return ((int*)(&sysctlbyname))[argc];
+      |                   ^~~~~~~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:9:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_6d12d.dir/build.make:85: CMakeFiles/cmTC_6d12d.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_6d12d/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sysctlbyname
+  return ((int*)(&sysctlbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the elf_aux_info exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_25103/fast && /usr/bin/make  -f CMakeFiles/cmTC_25103.dir/build.make CMakeFiles/cmTC_25103.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_25103.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_25103.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘elf_aux_info’ undeclared (first use in this function)
+    8 |   return ((int*)(&elf_aux_info))[argc];
+      |                   ^~~~~~~~~~~~
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_25103.dir/build.make:85: CMakeFiles/cmTC_25103.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_25103/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/auxv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef elf_aux_info
+  return ((int*)(&elf_aux_info))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_44fe9/fast && /usr/bin/make  -f CMakeFiles/cmTC_44fe9.dir/build.make CMakeFiles/cmTC_44fe9.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_44fe9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -o CMakeFiles/cmTC_44fe9.dir/CheckFunctionExists.c.o -c /opt/clion-2021.1.1/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_44fe9
+/opt/clion-2021.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44fe9.dir/link.txt --verbose=1
+/usr/bin/cc  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos" -DCHECK_FUNCTION_EXISTS=iconv_open -rdynamic CMakeFiles/cmTC_44fe9.dir/CheckFunctionExists.c.o -o cmTC_44fe9  -liconv 
+/usr/bin/ld: невозможно найти -liconv
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_44fe9.dir/build.make:106: cmTC_44fe9] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_44fe9/fast] Ошибка 2
+
+
+
+Determining if the alloca exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bc342/fast && /usr/bin/make  -f CMakeFiles/cmTC_bc342.dir/build.make CMakeFiles/cmTC_bc342.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_bc342.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_bc342.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘alloca’ undeclared (first use in this function); did you mean ‘valloc’?
+    8 |   return ((int*)(&alloca))[argc];
+      |                   ^~~~~~
+      |                   valloc
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_bc342.dir/build.make:85: CMakeFiles/cmTC_bc342.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_bc342/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alloca
+  return ((int*)(&alloca))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the dlopen exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0e0b1/fast && /usr/bin/make  -f CMakeFiles/cmTC_0e0b1.dir/build.make CMakeFiles/cmTC_0e0b1.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_0e0b1.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_0e0b1.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0e0b1
+/opt/clion-2021.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e0b1.dir/link.txt --verbose=1
+/usr/bin/cc  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -rdynamic CMakeFiles/cmTC_0e0b1.dir/CheckSymbolExists.c.o -o cmTC_0e0b1 
+/usr/bin/ld: CMakeFiles/cmTC_0e0b1.dir/CheckSymbolExists.c.o: в функции «main»:
+CheckSymbolExists.c:(.text+0x1f): неопределённая ссылка на «dlopen»
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_0e0b1.dir/build.make:106: cmTC_0e0b1] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_0e0b1/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <dlfcn.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef dlopen
+  return ((int*)(&dlopen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file audio/audiolib.h exists failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b6af6/fast && /usr/bin/make  -f CMakeFiles/cmTC_b6af6.dir/build.make CMakeFiles/cmTC_b6af6.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_b6af6.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_b6af6.dir/CheckIncludeFile.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: audio/audiolib.h: Нет такого файла или каталога
+    1 | #include <audio/audiolib.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_b6af6.dir/build.make:85: CMakeFiles/cmTC_b6af6.dir/CheckIncludeFile.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_b6af6/fast] Ошибка 2
+
+
+
+Determining if the include file samplerate.h exists failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b225c/fast && /usr/bin/make  -f CMakeFiles/cmTC_b225c.dir/build.make CMakeFiles/cmTC_b225c.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_b225c.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -o CMakeFiles/cmTC_b225c.dir/CheckIncludeFile.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: samplerate.h: Нет такого файла или каталога
+    1 | #include <samplerate.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_b225c.dir/build.make:85: CMakeFiles/cmTC_b225c.dir/CheckIncludeFile.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_b225c/fast] Ошибка 2
+
+
+
+Performing C SOURCE FILE Test HAVE_VIDEO_RPI failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_edc28/fast && /usr/bin/make  -f CMakeFiles/cmTC_edc28.dir/build.make CMakeFiles/cmTC_edc28.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_edc28.dir/src.c.o
+/usr/bin/cc -DHAVE_VIDEO_RPI  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"  -I/opt/vc/include/interface/vmcs_host/linux/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include  -L/opt/vc/lib -o CMakeFiles/cmTC_edc28.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: bcm_host.h: Нет такого файла или каталога
+    2 |         #include <bcm_host.h>
+      |                  ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_edc28.dir/build.make:85: CMakeFiles/cmTC_edc28.dir/src.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_edc28/fast] Ошибка 2
+
+
+Source file was:
+
+        #include <bcm_host.h>
+        int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_VIVANTE_VDK failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b31c9/fast && /usr/bin/make  -f CMakeFiles/cmTC_b31c9.dir/build.make CMakeFiles/cmTC_b31c9.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_b31c9.dir/src.c.o
+/usr/bin/cc -DHAVE_VIDEO_VIVANTE_VDK  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"   -o CMakeFiles/cmTC_b31c9.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:2:18: fatal error: gc_vdk.h: Нет такого файла или каталога
+    2 |         #include <gc_vdk.h>
+      |                  ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_b31c9.dir/build.make:85: CMakeFiles/cmTC_b31c9.dir/src.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_b31c9/fast] Ошибка 2
+
+
+Source file was:
+
+        #include <gc_vdk.h>
+        int main(int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_VIVANTE_EGL_FB failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_70cd6/fast && /usr/bin/make  -f CMakeFiles/cmTC_70cd6.dir/build.make CMakeFiles/cmTC_70cd6.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_70cd6.dir/src.c.o
+/usr/bin/cc -DHAVE_VIDEO_VIVANTE_EGL_FB  -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"   -o CMakeFiles/cmTC_70cd6.dir/src.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:4:18: fatal error: EGL/eglvivante.h: Нет такого файла или каталога
+    4 |         #include <EGL/eglvivante.h>
+      |                  ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_70cd6.dir/build.make:85: CMakeFiles/cmTC_70cd6.dir/src.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_70cd6/fast] Ошибка 2
+
+
+Source file was:
+
+        #define LINUX
+        #define EGL_API_FB
+        #include <EGL/eglvivante.h>
+        int main(int argc, char** argv) {}
+Determining if files pthread_np.h exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_93c43/fast && /usr/bin/make  -f CMakeFiles/cmTC_93c43.dir/build.make CMakeFiles/cmTC_93c43.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_93c43.dir/HAVE_PTHREAD_NP_H.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"   -D_REENTRANT -pthread -o CMakeFiles/cmTC_93c43.dir/HAVE_PTHREAD_NP_H.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_PTHREAD_NP_H.c:2:10: fatal error: pthread_np.h: Нет такого файла или каталога
+    2 | #include <pthread_np.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_93c43.dir/build.make:85: CMakeFiles/cmTC_93c43.dir/HAVE_PTHREAD_NP_H.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_93c43/fast] Ошибка 2
+
+
+Source:
+/* */
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if the pthread_setname_np exist failed with the following output:
+Change Dir: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cc787/fast && /usr/bin/make  -f CMakeFiles/cmTC_cc787.dir/build.make CMakeFiles/cmTC_cc787.dir/build
+make[1]: вход в каталог «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_cc787.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos"   -D_REENTRANT -pthread -o CMakeFiles/cmTC_cc787.dir/CheckSymbolExists.c.o -c /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘pthread_setname_np’ undeclared (first use in this function); did you mean ‘pthread_setcanceltype’?
+    8 |   return ((int*)(&pthread_setname_np))[argc];
+      |                   ^~~~~~~~~~~~~~~~~~
+      |                   pthread_setcanceltype
+/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_cc787.dir/build.make:85: CMakeFiles/cmTC_cc787.dir/CheckSymbolExists.c.o] Ошибка 1
+make[1]: выход из каталога «/home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:140: cmTC_cc787/fast] Ошибка 2
+
+
+File /home/geremy/CLionProjects/BunyEngine/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_setname_np
+  return ((int*)(&pthread_setname_np))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

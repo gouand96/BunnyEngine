@@ -1,0 +1,168 @@
+/opt/clion-2021.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/geremy/CLionProjects/BunyEngine
+CMake Warning (dev) at /opt/clion-2021.1.1/bin/cmake/linux/share/cmake-3.19/Modules/FindOpenGL.cmake:293 (message):
+  Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+  available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  FindOpenGL found both a legacy GL library:
+
+    OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+
+  and GLVND libraries for OpenGL and GLX:
+
+    OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+    OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+
+  OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+  compatibility with CMake 3.10 and below the legacy GL library will be used.
+Call Stack (most recent call first):
+  libs/glew/build/cmake/CMakeLists.txt:40 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Using X11 for window creation
+-- dynamic libasound -> libasound.so.2
+-- Checking for module 'jack'
+--   No package 'jack' found
+-- dynamic libpulse-simple -> libpulse-simple.so.0
+-- Checking for module 'esound'
+--   No package 'esound' found
+-- dynamic libsndio -> libsndio.so.7
+-- Checking for modules 'bcm_host;brcmegl'
+--   No package 'bcm_host' found
+--   No package 'brcmegl' found
+-- dynamic libX11 -> libX11.so.6
+-- dynamic libXext -> libXext.so.6
+-- dynamic libXcursor -> libXcursor.so.1
+-- dynamic libXinerama -> libXinerama.so.1
+-- dynamic libXi -> libXi.so.6
+-- dynamic libXrandr -> libXrandr.so.2
+-- dynamic libXrender -> libXrender.so.1
+-- dynamic libXss -> libXss.so.1
+-- dynamic libXxf86vm -> libXxf86vm.so.1
+-- dynamic libwayland-client -> libwayland-client.so.0
+-- dynamic libwayland-egl -> libwayland-egl.so.1
+-- dynamic libwayland-cursor -> libwayland-cursor.so.0
+-- dynamic libxkbcommon -> libxkbcommon.so.0
+-- Checking for modules 'libdrm;gbm;egl'
+--   No package 'libdrm' found
+--   No package 'gbm' found
+-- 
+-- SDL2 was configured with the following options:
+-- 
+-- Platform: Linux-5.8.0-50-generic
+-- 64-bit:   TRUE
+-- Compiler: /usr/bin/cc
+-- 
+-- Subsystems:
+--   Atomic:	ON
+--   Audio:	ON
+--   Video:	ON
+--   Render:	ON
+--   Events:	ON
+--   Joystick:	ON
+--   Haptic:	ON
+--   Power:	ON
+--   Threads:	ON
+--   Timers:	ON
+--   File:	ON
+--   Loadso:	ON
+--   CPUinfo:	ON
+--   Filesystem:	ON
+--   Dlopen:	ON
+--   Sensor:	ON
+--   Locale:	ON
+-- 
+-- Options:
+--   3DNOW                  (Wanted: ON): ON
+--   ALSA                   (Wanted: ON): ON
+--   ALSA_SHARED            (Wanted: ON): ON
+--   ALTIVEC                (Wanted: ON): OFF
+--   ARMNEON                (Wanted: OFF): OFF
+--   ARMSIMD                (Wanted: OFF): OFF
+--   ARTS                   (Wanted: ON): OFF
+--   ARTS_SHARED            (Wanted: ON): OFF
+--   ASSEMBLY               (Wanted: ON): ON
+--   ASSERTIONS             (Wanted: auto): auto
+--   BACKGROUNDING_SIGNAL   (Wanted: OFF): OFF
+--   CLOCK_GETTIME          (Wanted: OFF): OFF
+--   DIRECTFB_SHARED        (Wanted: OFF): OFF
+--   DIRECTX                (Wanted: OFF): OFF
+--   DISKAUDIO              (Wanted: ON): ON
+--   DUMMYAUDIO             (Wanted: ON): ON
+--   ESD                    (Wanted: ON): OFF
+--   ESD_SHARED             (Wanted: ON): OFF
+--   FOREGROUNDING_SIGNAL   (Wanted: OFF): OFF
+--   FUSIONSOUND            (Wanted: OFF): OFF
+--   FUSIONSOUND_SHARED     (Wanted: OFF): OFF
+--   GCC_ATOMICS            (Wanted: ON): ON
+--   HIDAPI                 (Wanted: OFF): OFF
+--   JACK                   (Wanted: ON): OFF
+--   JACK_SHARED            (Wanted: ON): OFF
+--   JOYSTICK_VIRTUAL       (Wanted: ON): OFF
+--   KMSDRM_SHARED          (Wanted: ON): OFF
+--   LIBC                   (Wanted: ON): ON
+--   LIBSAMPLERATE          (Wanted: ON): OFF
+--   LIBSAMPLERATE_SHARED   (Wanted: ON): OFF
+--   MMX                    (Wanted: ON): ON
+--   NAS                    (Wanted: ON): OFF
+--   NAS_SHARED             (Wanted: ON): OFF
+--   OSS                    (Wanted: ON): ON
+--   PTHREADS               (Wanted: ON): ON
+--   PTHREADS_SEM           (Wanted: ON): ON
+--   PULSEAUDIO             (Wanted: ON): ON
+--   PULSEAUDIO_SHARED      (Wanted: ON): ON
+--   RENDER_D3D             (Wanted: OFF): OFF
+--   RENDER_METAL           (Wanted: OFF): OFF
+--   RPATH                  (Wanted: ON): OFF
+--   SDL_DLOPEN             (Wanted: ON): ON
+--   SDL_STATIC_PIC         (Wanted: OFF): OFF
+--   SDL_TEST               (Wanted: OFF): OFF
+--   SNDIO                  (Wanted: ON): ON
+--   SNDIO_SHARED           (Wanted: ON): ON
+--   SSE                    (Wanted: ON): ON
+--   SSE2                   (Wanted: ON): ON
+--   SSE3                   (Wanted: ON): ON
+--   SSEMATH                (Wanted: ON): OFF
+--   VIDEO_COCOA            (Wanted: OFF): OFF
+--   VIDEO_DIRECTFB         (Wanted: OFF): OFF
+--   VIDEO_DUMMY            (Wanted: ON): ON
+--   VIDEO_KMSDRM           (Wanted: ON): OFF
+--   VIDEO_METAL            (Wanted: OFF): OFF
+--   VIDEO_OFFSCREEN        (Wanted: OFF): OFF
+--   VIDEO_OPENGL           (Wanted: ON): ON
+--   VIDEO_OPENGLES         (Wanted: ON): ON
+--   VIDEO_RPI              (Wanted: ON): OFF
+--   VIDEO_VIVANTE          (Wanted: ON): OFF
+--   VIDEO_VULKAN           (Wanted: ON): ON
+--   VIDEO_WAYLAND          (Wanted: ON): ON
+--   VIDEO_WAYLAND_QT_TOUCH (Wanted: ON): ON
+--   VIDEO_X11              (Wanted: ON): ON
+--   VIDEO_X11_XCURSOR      (Wanted: ON): ON
+--   VIDEO_X11_XINERAMA     (Wanted: ON): ON
+--   VIDEO_X11_XINPUT       (Wanted: ON): ON
+--   VIDEO_X11_XRANDR       (Wanted: ON): ON
+--   VIDEO_X11_XSCRNSAVER   (Wanted: ON): ON
+--   VIDEO_X11_XSHAPE       (Wanted: ON): ON
+--   VIDEO_X11_XVM          (Wanted: ON): ON
+--   WASAPI                 (Wanted: OFF): OFF
+--   WAYLAND_SHARED         (Wanted: ON): ON
+--   X11_SHARED             (Wanted: ON): ON
+-- 
+--  CFLAGS:         -idirafter "/home/geremy/CLionProjects/BunyEngine/libs/SDL2/src/video/khronos" -DHAVE_LINUX_VERSION_H
+--  EXTRA_CFLAGS:  -I/usr/include -D_REENTRANT -msse3 -msse2 -msse -m3dnow -mmmx -Wshadow -fvisibility=hidden -Wdeclaration-after-statement -Werror=declaration-after-statement -fno-strict-aliasing -Wall 
+--  EXTRA_LDFLAGS: -Wl,--no-undefined;-pthread
+--  EXTRA_LIBS:    m;dl;dbus-1;ibus-1.0;gio-2.0;gobject-2.0;glib-2.0
+-- 
+--  Build Shared Library: OFF
+--  Build Static Library: ON
+--  Build Static Library with Position Independent Code: OFF
+-- 
+-- If something was not detected, although the libraries
+-- were installed, then make sure you have set the
+-- CFLAGS and LDFLAGS environment variables correctly.
+-- 
+-- GLM: Version 0.9.9.9
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/geremy/CLionProjects/BunyEngine/cmake-build-debug
