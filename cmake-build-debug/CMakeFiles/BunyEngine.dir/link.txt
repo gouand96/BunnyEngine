@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/BunyEngine.dir/BEngine/main.cpp.o -o BunyEngine 

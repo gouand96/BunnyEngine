@@ -2,7 +2,71 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BunyEngine/bgfx.cmake" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BunyEngine/bgfx.cmake/bgfx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BunyEngine/bgfx.cmake/bimg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BunyEngine/bgfx.cmake/bx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BunyEngine/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BunyEngine/sdl-bgfx-imgui-starter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/SPIRV-Cross" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/arcana.cpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/arcana.cpp/Source/Submodules/GSL" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/base-n" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/bgfx.cmake" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/bgfx.cmake/bgfx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/bgfx.cmake/bimg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/bgfx.cmake/bx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/glslang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/ios-cmake" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/v8inspector/Dependencies/asio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/v8inspector/Dependencies/llhttp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/xr/Dependencies/OpenXR-MixedReality" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/xr/Dependencies/OpenXR-SDK" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/BabylonNative/Dependencies/xr/Dependencies/arcore-android-sdk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/GLEW" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/ImGui-CMake-Installer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/ImGui-CMake-Installer/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Nuklear" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/SDL_ttf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/SDL_ttf/external/freetype" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/SDL_ttf/external/freetype/subprojects/dlg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/SDL_ttf/external/harfbuzz" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Vulkan-Hpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Vulkan-Hpp/Vulkan-Headers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Vulkan-Hpp/glfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Vulkan-Hpp/glm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Vulkan-Hpp/glslang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/Vulkan-Hpp/tinyxml2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/assimp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/libs/bgfx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx-cmake" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx-cmake/bgfx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx-cmake/bimg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx-cmake/bx" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/libs/bgfx.cmake" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx.cmake/bgfx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx.cmake/bimg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bgfx.cmake/bx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bimg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/box2d" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/brotli" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/bx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/glfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/glm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/glslang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/googletest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/harfbuzz" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/imgui/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/imgui_sdl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/imnodes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/imnodes/vcpkg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/rapidjson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/rapidjson/thirdparty/gtest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/sdl-bgfx-imgui-starter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/shaderc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/v8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/v8-cmake" vcs="Git" />
   </component>
 </project>
