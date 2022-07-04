@@ -23,8 +23,16 @@ elseif (UNIX)
     if (CMAKE_DL_LIBS)
         list(APPEND glfw_LIBRARIES "${CMAKE_DL_LIBS}")
     endif()
-
-    find_package(X11 REQUIRED)
+    if(APPLE)
+        list(LENGTH CMAKE_OSX_ARCHITECTURES NUMARCH)
+        if(NUMARCH GREATER 1)
+            if(NOT EXISTS /usr/X11R6/lib//libSM.6.dylib)
+                set(X11_FOUND FALSE)
+                message("disable X11, because of universal binary and sysroot")
+            endif()
+        endif()
+    endif()
+#    find_package(X11 REQUIRED)
 
     # Set up library and include paths
     list(APPEND glfw_INCLUDE_DIRS "${X11_X11_INCLUDE_PATH}")

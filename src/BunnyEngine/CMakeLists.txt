@@ -1,14 +1,20 @@
 cmake_minimum_required(VERSION 3.8)
 project(BunnyEngine)
 set(CMAKE_CXX_STANDARD 20)
-set(ENABLE_EXPORTS 1)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -std=c++17 -fPIC")
-
 add_subdirectory(libs/googletest)
 add_subdirectory(libs/glm)
+set(OpenGL_GL_PREFERENCE GLVND)
+find_package(OpenGL REQUIRED)
 find_package(FreeType REQUIRED)
-#add_subdirectory(libs/glfw GLFE)
+find_package(Vulkan REQUIRED)
+if (UNIX)
+    set(CMAKE_MACOSX_RPATH 1)
+endif (UNIX)
+
+
+
+include(CMake/findMono.cmake)
+#add_subdirectory(libs/glfw)
 if(NOT SDL2_DIR)
     set(SDL2_DIR "" CACHE PATH "SDL2 directory")
 endif()
@@ -142,9 +148,26 @@ add_subdirectory(libs/SDL_ttf)
 
 
 
+
+file(GLOB SDL_IMAGE_SRC
+        libs/SDL2_image/*.c
+        libs/SDL2_image/*.h
+        )
+
+#file(GLOB SDL_MIXER_SRC
+#        libs/SDL2_mixer/*.c
+#        libs/SDL2_mixer/*.h
+#        libs/SDL2_mixer/**/*.c
+#        libs/SDL2_mixer/**/*.h
+#        libs/SDL2_mixer/**/**/*.c
+#        libs/SDL2_mixer/**/**/*.h
+#        )
+
+#add_library(SDL2_mixer STATIC ${SDL_MIXER_SRC})
+
+
 #Box 2D
 add_subdirectory(libs/box2d buildBox2d)
-include_directories(libs/box2d/include)
 
 #Rapid JSON
 
@@ -152,30 +175,28 @@ set(RAPIDJSON_BUILD_DOC OFF CACHE BOOL "Build rapidjson documentation.")
 set(RAPIDJSON_BUILD_EXAMPLES OFF CACHE BOOL "Build rapidjson examples.")
 set(RAPIDJSON_BUILD_TESTS OFF CACHE BOOL "Build rapidjson perftests and unittests.")
 add_subdirectory(libs/rapidjson buildRapidjson)
-include_directories(libs/rapidjson/include)
 
 #IL set
 set(IL_INCLUDE_DIRS /usr/include/IL/)
-include_directories(${IL_INCLUDE_DIRS})
 
-#SDL Includes
-include_directories(${SDL2_INCLUDE_DIRS} libs/glad/include libs/glm libs/Nuklear libs/SDL_ttf libs/imgui libs/imnodes libs/imgui/backends)
+
 
 
 #Project conf
 set(PROJECT_SOURCE_DIR ${CMAKE_SOURCE_DIR})
-file(GLOB SRC_FILES *.cpp
+file(GLOB SRC_FILES
+        *.cpp
         *.h
         core/*.h
         core/*.cpp
         core/**/*.cpp
         core/**/*.h
-
         application/*.h
         application/*.cpp
         application/**/*.cpp
         application/**/*.h
         )
+
 set(BE_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/src/BunnyEngine")
 message(${BE_INCLUDE_DIRS})
 #find_package(imgui REQUIRED)
@@ -193,12 +214,150 @@ set(IMGUI_SOURCES
         libs/imgui/imstb_rectpack.h
         libs/imgui/imstb_textedit.h
         libs/imgui/imstb_truetype.h
-        libs/imgui/backends/imgui_impl_sdl.h
-        libs/imgui/backends/imgui_impl_sdl.cpp
+        libs/imgui/backends/imgui_impl_glfw.h
+        libs/imgui/backends/imgui_impl_glfw.cpp
         libs/imnodes/imnodes.h
         libs/imnodes/imnodes.cpp
         )
 
-add_library(BunnyEngine SHARED ${SRC_FILES} libs/glad/src/glad.c ${IMGUI_SOURCES} ${testbed})
 
-target_link_libraries(BunnyEngine PUBLIC glfw ${GLEW_LIBRARY} ${SDL2_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} box2d freetype imgui glad)
+#Basis Universal
+#set(STATIC TRUE)
+#add_subdirectory(libs/basis_universal)
+#include_directories(libs/basis_universal)
+
+
+##Convection Kernels
+#file(GLOB CONVECTION_KERNELS_FILES
+#        libs/ConvectionKernels/*.h
+#        libs/ConvectionKernels/*.cpp
+#        libs/ConvectionKernels/**/*.h
+#        libs/ConvectionKernels/**/*.cpp
+#        libs/ConvectionKernels/**/**/*.h
+#        libs/ConvectionKernels/**/**/*.cpp
+#        )
+#include_directories(libs/ConvectionKernels)
+#doctest
+#add_subdirectory(libs/doctest)
+
+
+#enet
+#add_subdirectory(libs/enet)
+
+##etcpak
+#file(GLOB ETCPAK_SRC
+#        libs/etcpak/*.h
+#        libs/etcpak/*.cpp
+#        libs/etcpak/**/*.h
+#        libs/etcpak/**/*.cpp
+#        libs/etcpak/**/**/*.h
+#        libs/etcpak/**/**/*.cpp
+#        )
+#include_directories(libs/etcpak)
+
+##FastLZ
+#file(GLOB FASTLZ_SRC
+#        libs/FastLZ/*.h
+#        libs/FastLZ/*.c
+#        libs/FastLZ/**/*.h
+#        libs/FastLZ/**/*.c
+#        libs/FastLZ/**/**/*.h
+#        libs/FastLZ/**/**/*.c
+#        )
+#include_directories(libs/FastLZ)
+
+
+
+#graphite
+add_subdirectory(libs/graphite)
+
+#harfbuzz
+#add_subdirectory(libs/harfbuzz)
+#include_directories(libs/harfbuzz/src)
+
+
+#hqx
+add_subdirectory(libs/hqx)
+
+#jpeg_compressor
+add_subdirectory(libs/jpeg-compressor)
+
+
+
+#libogg
+add_subdirectory(libs/libogg)
+
+
+#libsquish
+#include_directories(libs/libsquish)
+#add_subdirectory(libs/libsquish)
+
+
+#libtheora
+
+add_subdirectory(libs/libtheora)
+
+
+#libvorbis
+#add_subdirectory(libs/libvorbis)
+#include_directories(libs/libvorbis/include)
+
+#libwebp
+
+
+#set(PNG_SHARED ON CACHE BOOL "" FORCE)
+#set(PNG_STATIC OFF CACHE BOOL "" FORCE)
+#set(PNG_EXECUTABLES OFF CACHE BOOL "" FORCE) # we only want lib
+#set(PNG_TESTS OFF CACHE BOOL "" FORCE) # we only want lib
+#set(SKIP_INSTALL_ALL OFF CACHE BOOL "" FORCE) # we only want lib
+
+
+##SPIRV-Reflect
+#include_directories(libs/SPIRV-Reflect/include)
+#set(SPIRV_REFLECT_STATIC_LIB ON)
+#add_subdirectory(libs/SPIRV-Reflect)
+
+#lpng
+add_subdirectory(libs/libpng)
+set(WEBP_BUILD_CWEBP ON)
+set(WEBP_BUILD_DWEBP ON)
+#add_subdirectory(libs/libwebp)
+#include_directories(libs/libwebp/src)
+
+#SDL2_image
+add_subdirectory(libs/SDL2_image)
+
+#reactphysics3d
+add_subdirectory(libs/reactphysics3d)
+
+
+##v8
+#add_subdirectory(libs/v8-cmake)
+
+add_library(BunnyEngine SHARED  ${SRC_FILES}  ${IMGUI_SOURCES} ${Vulkan_LIBRARIES} libs/glad/src/glad.c)
+target_include_directories(BunnyEngine PUBLIC
+        ${IL_INCLUDE_DIRS}
+        ${Vulkan_INCLUDE_DIRS}
+        ${SDL2_INCLUDE_DIRS}
+        libs/glad/include
+        libs/glm
+        libs/Nuklear
+        libs/SDL_ttf
+        libs/SDL2_image
+        libs/imgui
+        libs/imnodes
+        libs/imgui/backends
+        libs/glad/include
+        libs/freetype/include
+        libs/rapidjson/include
+        libs/box2d/include
+        libs/libpng
+        libs/reactphysics3d/include
+        libs/libtheora/include
+        libs/libogg/include
+        libs/jpeg-compressor
+        libs/hqx/include
+        libs/graphite/include
+        libs/mono
+        )
+target_link_libraries(BunnyEngine PUBLIC glfw ${GLEW_LIBRARY} ${SDL2_LIBRARIES} ${OPENGL_gl_LIBRARY} ${GLU_LIBRARY} glad box2d freetype imgui SDL2_image ogg png libtheora reactphysics3d jpge hqx graphite2)

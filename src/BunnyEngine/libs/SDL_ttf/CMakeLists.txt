@@ -56,28 +56,28 @@ project(SDL2_ttf LANGUAGES C
 
 message(STATUS "Configuring ${PROJECT_NAME} ${PROJECT_VERSION}")
 
-if (NOT (TARGET SDL2::SDL2 OR TARGET SDL2::SDL2-static))
-    find_package(SDL2 REQUIRED)
-endif()
+#if (NOT (TARGET SDL2::SDL2 OR TARGET SDL2::SDL2-static))
+#   find_package(SDL2 REQUIRED)
+#endif()
 
 # Workaround for Ubuntu 20.04's SDL being older than
 # https://github.com/libsdl-org/SDL/issues/3531
-if (NOT (TARGET SDL2::SDL2 OR TARGET SDL2::SDL2-static))
-    find_library(SDL2_LIBRARY
-        NAMES SDL2
-        HINTS "${SDL2_EXEC_PREFIX}"
-        REQUIRED
-    )
-    if (NOT SDL2_LIBRARY)
-        message(FATAL_ERROR "Could not find SDL2 library. Please define SDL2_EXEC_PREFIX and/or SLD2_LIBRARY")
-    endif()
-    add_library(SDL2::SDL2 SHARED IMPORTED)
-    set_target_properties(SDL2::SDL2 PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES "${SDL2_INCLUDE_DIRS}"
-        IMPORTED_LINK_INTERFACE_LANGUAGES "C"
-        IMPORTED_LOCATION "${SDL2_LIBRARY}"
-    )
-endif()
+#if (NOT (TARGET SDL2::SDL2 OR TARGET SDL2::SDL2-static))
+#    find_library(SDL2_LIBRARY
+#        NAMES SDL2
+#        HINTS "${SDL2_EXEC_PREFIX}"
+#        REQUIRED
+#    )
+#    if (NOT SDL2_LIBRARY)
+#        message(FATAL_ERROR "Could not find SDL2 library. Please define SDL2_EXEC_PREFIX and/or SLD2_LIBRARY")
+#    endif()
+#    add_library(SDL2::SDL2 SHARED IMPORTED)
+#    set_target_properties(SDL2::SDL2 PROPERTIES
+#        INTERFACE_INCLUDE_DIRECTORIES "${SDL2_INCLUDE_DIRS}"
+#        IMPORTED_LINK_INTERFACE_LANGUAGES "C"
+#        IMPORTED_LOCATION "${SDL2_LIBRARY}"
+#    )
+#endif()
 
 include(CMakeDependentOption)
 include(CMakePackageConfigHelpers)
